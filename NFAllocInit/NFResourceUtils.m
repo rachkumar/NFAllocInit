@@ -90,7 +90,6 @@
     BOOL didDeleteFile = [fileManager removeItemAtPath:filePath error:&fileError];
     
     if (fileError) {
-       // NFLog(@"ERROR: %@", fileError.localizedDescription);
         printf("error occured");
     }
     

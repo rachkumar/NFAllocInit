@@ -59,7 +59,6 @@
         [self.players addObject:player]; //need to keep a reference or else ARC will release player before it plays
     
     } else {
-		//NFLog(@"ERROR: Failed to play effect %@ due to error %@", fileName, [error description]);
         printf("error occured");
     }
 }
