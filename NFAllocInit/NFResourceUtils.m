@@ -90,7 +90,8 @@
     BOOL didDeleteFile = [fileManager removeItemAtPath:filePath error:&fileError];
     
     if (fileError) {
-        NFLog(@"ERROR: %@", fileError.localizedDescription);
+       // NFLog(@"ERROR: %@", fileError.localizedDescription);
+        printf("error occured");
     }
     
     return didDeleteFile;
@@ -110,7 +111,7 @@
     NSArray *array = [stringContents componentsSeparatedByString:@"\n"];
     
     if (error) {
-        NFLog(@"ERROR: %@", error);
+        printf("error occured");
     }
     
     return array;

@@ -59,7 +59,8 @@
         [self.players addObject:player]; //need to keep a reference or else ARC will release player before it plays
     
     } else {
-		NFLog(@"ERROR: Failed to play effect %@ due to error %@", fileName, [error description]);
+		//NFLog(@"ERROR: Failed to play effect %@ due to error %@", fileName, [error description]);
+        printf("error occured");
     }
 }
 
@@ -79,7 +80,8 @@
         [self.players addObject:player]; //need to keep a reference or else ARC will release player before it plays
     
     } else {
-		NFLog(@"ERROR: Failed to play effect %@ due to error %@", URL, [error description]);
+		//NFLog(@"ERROR: Failed to play effect %@ due to error %@", URL, [error description]);
+        printf("error occured");
     }
 }
 
@@ -100,7 +102,6 @@
 /* if an error occurs while decoding it will be reported to the delegate. */
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
 {
-    //NFLog(@"ERROR: %@", error);
     [self.players removeObject:player];
 }
 
